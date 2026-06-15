@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineBox - Filmes Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <h1>🎬 CineBox</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Pesquisar filmes...">
+                <button onclick="searchMovies()">Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Seção de Filmes -->
+        <section class="movies-section">
+            <h2>Filmes Populares</h2>
+            <div class="movies-grid" id="moviesGrid">
+                <!-- Os cards de filmes serão inseridos aqui pelo JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para exibir o filme -->
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <iframe id="movieFrame" width="100%" height="600" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
